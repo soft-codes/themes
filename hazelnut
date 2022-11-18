@@ -1,0 +1,250 @@
+<!------------------------------------------------------------------------
+ 
+ 
+ 
+                      hazelnut // by @softcodes
+ 
+
+
+------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html>
+<head>
+<title>{Title}</title>
+ 
+<link rel="shortcut icon" href="{Favicon}">
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- google fonts -->
+
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;0,800;1,400;1,700&display=swap" rel="stylesheet">
+
+<!-- scripts -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="https://static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js"></script>
+
+<script>
+(function($){
+$(document).ready(function(){
+$("a[title]").style_my_tooltips({
+tip_follows_cursor:true,
+tip_delay_time:90,
+tip_fade_speed:300,
+attribute:"title"
+});
+});
+})(jQuery);
+</script>
+
+<style type="text/css">
+
+/* ---------------------- change colors & font here --------------------- */
+
+:root {
+    --accent:#cfb095; /* accent color */
+    --link-hover-color:#ffffff; /* link text color on hover */
+    --bg-color:#ffffff; /* background color */
+    --headings:#222222; /* headings */
+    --borders:#eaeaea; /* border */
+    
+    --body-font:'Open Sans'; /* body font */
+    --text-size:11px; /* body font size */
+    --body-color:#555555; /* text color */
+}
+
+/* ---------------------------------------------------------------------- */
+
+@-webkit-keyframes fadein {
+        0%   {opacity: 0;}
+        100% { opacity: 1; }}
+ 
+@-moz-keyframes fadein {
+        0%   { opacity: 0; }
+        100% { opacity: 1; }}
+ 
+@keyframes fadein {
+        0%   { opacity: 0; }
+        100% { opacity: 1; }}
+
+/*----- BASIC STYLING -----*/
+
+#s-m-t-tooltip {
+    max-width:300px;
+    margin-top:-35px;
+    margin-left:0px;
+    font-size:9px;
+    letter-spacing:1.25px;
+    font-weight:500;
+    padding:1px 7px;
+    text-align:center;
+    text-transform:uppercase;
+    color:#aaaaaa;
+    background-color:#fff;
+    z-index:999999;
+}
+
+body {
+    font-family:var(--body-font);
+    font-size:var(--text-size);
+    text-align:left;
+    line-height:1.55em;
+    letter-spacing:0.5px;
+    color:var(--body-color);
+    background-color:#fff;
+    -moz-osx-font-smoothing:grayscale;
+    -webkit-font-smoothing:antialiased;
+    font-smoothing:antialiased;
+    -webkit-animation: fadein 1.3s;
+    -moz-animation:fadein 1.3s;
+    animation:fadein 1.3s;
+}
+
+h1 {
+    font-family:'Open Sans';
+    font-size:var(--text-size);
+    color:var(--headings);
+    font-weight:700;
+    margin:0 0 3px 0;
+    padding:0px;
+    font-size:11px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+}
+
+hr {
+    width:30%;
+    margin:35px 0 40px 0;
+    border-width: 1px 0px 0px 0px;
+    border-style:solid;
+    border-color:var(--borders);
+}
+
+#container {
+    display:block;
+    position:relative;
+    top:125px;
+    background-color:#fff;
+    width:375px;
+    height:auto;
+    margin:auto;
+}
+
+#container a {
+    color:var(--body-color);
+    text-decoration:none;
+    background:
+        linear-gradient(
+        to bottom, var(--accent) 0%,
+        var(--accent) 100% );
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 1px 1px;
+    transition: .3s;
+}
+
+#container a:hover {
+    color:var(--link-hover-color);
+    background-size: 2px 50px;
+}
+
+.bio-heading {
+    font-size:25px;
+    -webkit-text-stroke: 1px var(--headings);
+    -webkit-text-fill-color: transparent;
+    font-family:'Open Sans';
+    text-transform:uppercase;
+    font-weight:800;
+    letter-spacing:3px;
+    text-shadow:2px 2px 0px var(--accent);
+    margin-bottom:30px;
+}
+
+.bio {
+    padding:0px 0px 20px 0px;
+}
+
+.links {
+    display:grid;
+    grid-template-columns:34% 34% 34%;
+}
+
+.links span {
+    display:block;
+}
+
+.links a {
+    display:inline-block;
+    margin-bottom:2px;
+}
+
+iframe.tmblr-iframe {display:none;}
+
+/*---- credit -  pls don't remove <3 -----*/
+
+#credit {
+    position: fixed;
+    bottom: 20px;
+    right: 25px;
+    font-size: 15px;
+    color:#aaaaaa;
+}
+
+#credit a {
+    color:#aaaaaa;
+}
+
+</style>
+</head>
+<body>
+
+<div id="container">
+
+<div class="bio-heading">biography</div>
+
+<!-- bio -->
+
+<p><b>hi, i'm bebe!</b> lorem ipsum dolor <a href="/">sit amet</a>, consectetur adipiscing elit. integer nec odio. praesent libero. sed cursus ante dapibus diam. sed nisi. nulla quis sem at nibh elementum imperdiet. duis sagittis ipsum. praesent mauris. fusce nec tellus sed augue semper porta. mauris massa.</p>
+
+<p>class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. curabitur sodales ligula in libero. sed dignissim lacinia nunc. <a href="/">curabitur tortor</a>. pellentesque nibh. aenean quam. in scelerisque sem at dolor. maecenas mattis.</p>
+
+<hr/>
+
+<!-- end bio -->
+
+
+<div class="links">
+    <span>
+    <h1>blogs</h1>
+        <a href="/">writing</a><br/>
+        <a href="/">aesthetics</a><br/>
+        <a href="/">fandom</a><br/>
+    </span>
+    
+    <span>
+    <h1>networks</h1>
+        <a href="/">one</a><br/>
+        <a href="/">two</a><br/>
+        <a href="/">three</a><br/>
+    </span>
+    
+    <span>
+    <h1>elsewhere</h1>
+        <a href="/">pinterest</a><br/>
+        <a href="/">instagram</a><br/>
+        <a href="/">twitter</a><br/>
+    </span>
+    
+</div>
+
+</div><!-- end container -->
+
+<!-- pls don't remove, thanks!<3 -->
+
+<div id="credit"><a href="https://softcodes.tumblr.com" target="_blank" title="@softcodes"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 25 25" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></a></div>
+
+
+</body>
+</html>
