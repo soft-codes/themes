@@ -580,6 +580,7 @@ img {
 .trackdetails {
     width:auto;
     line-height:1.6em;
+    font-size:12px;
     display:inline-block;
     margin-left:20px;
     margin-top:23px;
