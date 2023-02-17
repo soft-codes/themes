@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <!---
  
@@ -451,14 +451,14 @@ input:focus:-ms-input-placeholder {color:transparent;}
     display:block;
     position:relative;
     margin:0 auto -18px auto;
-    background-color:#fff!important;
+    background-color:{color:background};!important;
 }
 
 #pro-image img {
     width:40px;
     height:40px;
     border-radius:100%;
-    background-color:#fff!important;
+    background-color:{color:background};!important;
 }
 
 #pro-title {
