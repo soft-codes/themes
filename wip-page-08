@@ -4,6 +4,18 @@
  
 wip page 08 - by @bebewrites
 pls do not remove credit, thanks!<3
+
+many sections of this code can be duplicated
+for additional sections, and you can delete
+whole sections if you don't want to use them!
+
+if you'd like to make this code ~javascript free~
+delete the slide out menu at the beginning of the 
+html section, and delete the script at the very
+bottom of the code.
+
+list of full credits:
+bebewrites.tumblr.com/credits
  
  
  
@@ -187,8 +199,17 @@ header {
 
 nav {float:right;padding-top:15px;}
 
-nav a {margin-left:1.25em;border-bottom:2px solid var(--background-color);}
-nav a:hover {border-bottom:2px solid var(--light-accent);}
+nav a {
+    margin-left:1.25em;
+    background-color:var(--background-color);
+    padding:3px 5px 4px 5px;
+    border-radius:3px;
+}
+
+nav a:hover {
+    background-color:var(--light-accent);
+    color:var(--text-color);
+}
 
 nav i {
     margin-right:5px;
@@ -451,6 +472,46 @@ footer h1 {
     background:none;
 }
 
+.author {
+    width:50px;
+    height:50px;
+    border-radius:5px;
+    padding:3px;
+    border:1px solid var(--accent);
+    filter: grayscale(50%);
+    margin:0.25em 0.75em 0 0;
+    float:left;
+}
+
+.author img {
+    width:50px;
+    height:50px;
+    border-radius:4px;
+    overflow:hidden;
+}
+
+.socials {
+    display:grid;
+    grid-template-columns:25% 25% 25% 25%;
+}
+
+.socials a {
+    display:inline-block;
+    margin-right:0.25em;
+    margin-bottom:1em;
+}
+
+.socials a:hover {
+    color:var(--headings);
+}
+
+.socials i {
+    display:inline-block;
+    font-size:calc( var(--text-size) + 2px);
+    vertical-align:middle;
+    margin-right:4px;
+}
+
 
 /*---- slide out ----*/
 
@@ -585,23 +646,25 @@ slide out menu content - delete this section (from here through the three dashed
 <main>
 <div id="main">
 
+<!---------- main header ---------->
 <header>
+
+    <!-- wip title goes here -->
     <div id="title">for reasons wretched & divine</div>
     
-    <nav>
-        <a href="/"><i class="ph ph-house"></i>index</a>
-        <a href="/ask"><i class="ph ph-chats-circle"></i>contact</a>
-        <a href="www.tumblr.com/dashboard"><i class="ph ph-list"></i>dash</a>
-        <a href="/" title="by @bebewrites"><i class="ph ph-code"></i>theme</a>
-    </nav>
+<nav>
+<a href="/"><i class="ph ph-house"></i>index</a>
+<a href="/ask"><i class="ph ph-chats-circle"></i>contact</a>
+<a href="www.tumblr.com/dashboard"><i class="ph ph-list"></i>dash</a>
+<a href="https://bebewrites.tumblr.com"><i class="ph ph-code"></i>theme</a>
+</nav>
 </header>
 
 <div id="featured-image"></div>
-
 <div id="main-wrap">
-
 <div id="col-two">
 
+<!---------- synopsis section ---------->
 <section>
     <h1>synopsis <i class="ph ph-pencil"></i></h1>
     
@@ -609,6 +672,7 @@ slide out menu content - delete this section (from here through the three dashed
         Lorem ipsum dolor sit amet. At commodi amet id <a href="/">fugiat harum</a> ex blanditiis nulla cum consequatur accusamus ut doloribus magnam ut expedita perspiciatis? Et fugiat quaerat 33 animi consectetur eum sunt reiciendis. Quo sunt quia ab doloremque totam est repellendus nulla qui magni architecto aut expedita dolores.Eum voluptas vero ut voluptas suscipit aut consequatur adipisci qui commodi cupiditate ut autem enim At amet rerum. Est quae dicta sit adipisci animi est dignissimos harum aut explicabo galisum sit aliquam facere cum enim doloribus At blanditiis optio.
     </div>
 
+    <!-- tags section - you can delete if you don't want -->
     <div id="tags">
         <b>tagged as:</b>&nbsp;
         <span>idiots to lovers,</span>
@@ -620,21 +684,23 @@ slide out menu content - delete this section (from here through the three dashed
         <span>gods and monsters,</span>
         <span>royally gay shenanigans,</span>
         <span>villian with a sweet tooth</span>
-    </div>
-</section><!-- end section -->
+    </div><!-- end tags -->
+    
+</section><!-- end synopsis section -->
 
 
-<!---------- characters ---------->
+<!-- main characters section - copy the "character one" section and paste after "character one" for new characters. it helps to number them so you don't get confused :) -->
 
 <section id="character">
 
     <h1>major characters <i class="ph ph-users-three"></i></h1>
-
+    
     <div id="character-wrap">
 
         <!-- character one -->
         <div class="char-box">
-            <img class="char-img" src="https://64.media.tumblr.com/07a80a1cef94ae7a7f3913677c63002b/7421119c06490779-d9/s540x810/2f7909426d53416446758b43f8f67143b7f6c2b7.jpg"/>
+            
+            <!-- image --><img class="char-img" src="https://64.media.tumblr.com/07a80a1cef94ae7a7f3913677c63002b/7421119c06490779-d9/s540x810/2f7909426d53416446758b43f8f67143b7f6c2b7.jpg"/>
         
             <div class="char-content">
                 <div class="name">character name</div>
@@ -643,78 +709,14 @@ slide out menu content - delete this section (from here through the three dashed
             
             <div class="ch-bio">lorem ipsum dolor sit amet, consectetur adipiscing elit. integer nec odio. praesent libero. sed cursus ante dapibus diam. sed nisi nulla quis.</div>
             </div>
-        </div>
+        </div><!-- end -->
 
-        <!-- character two -->
-        <div class="char-box">
-            <img class="char-img" src="https://64.media.tumblr.com/b663a0f8ab4f4179a3f084edf5bfa431/7421119c06490779-f2/s540x810/eeeb72d125671fa99b7fd907b728d4d824375193.jpg"/>
-        
-            <div class="char-content">
-                <div class="name">character name</div>
-
-                <div class="char-subheading">subheading goes here</div>
-            
-            <div class="ch-bio">lorem ipsum dolor sit amet, consectetur adipiscing elit. integer nec odio. praesent libero. sed cursus ante dapibus diam. sed nisi nulla quis.</div>
-            </div>
-        </div>
-        
-        <!-- character three -->
-        <div class="char-box">
-            <img class="char-img" src="https://64.media.tumblr.com/b0fb287fa97b89f7d5786ac9630aea34/7421119c06490779-0b/s540x810/a5d6c848913e94c6051e2092347c6ce60ae5dacb.jpg"/>
-        
-            <div class="char-content">
-                <div class="name">character name</div>
-
-                <div class="char-subheading">subheading goes here</div>
-            
-            <div class="ch-bio">lorem ipsum dolor sit amet, consectetur adipiscing elit. integer nec odio. praesent libero. sed cursus ante dapibus diam. sed nisi nulla quis.</div>
-            </div>
-        </div>
-        
-        <!-- character four -->
-        <div class="char-box">
-            <img class="char-img" src="https://64.media.tumblr.com/91ad0a48aff25018b5a8f83e377ef380/7421119c06490779-7d/s540x810/166402320dddae2b806bccd2c970d10c0eb7f3c1.jpg"/>
-        
-            <div class="char-content">
-                <div class="name">character name</div>
-
-                <div class="char-subheading">subheading goes here</div>
-            
-            <div class="ch-bio">lorem ipsum dolor sit amet, consectetur adipiscing elit. integer nec odio. praesent libero. sed cursus ante dapibus diam. sed nisi nulla quis.</div>
-            </div>
-        </div>
-        
-        <!-- character five -->
-        <div class="char-box">
-            <img class="char-img" src="https://64.media.tumblr.com/9cc5d7d54806e3105c9f7fd7e16a9309/7421119c06490779-57/s540x810/8daba0ff410f35d81e7bc1975102b8d53b573029.jpg"/>
-        
-            <div class="char-content">
-                <div class="name">character name</div>
-
-                <div class="char-subheading">subheading goes here</div>
-            
-            <div class="ch-bio">lorem ipsum dolor sit amet, consectetur adipiscing elit. integer nec odio. praesent libero. sed cursus ante dapibus diam. sed nisi nulla quis.</div>
-            </div>
-        </div>
-        
-        <!-- character six -->
-        <div class="char-box">
-            <img class="char-img" src="https://64.media.tumblr.com/42ec545d65f5463691cddc5f65791518/7421119c06490779-71/s540x810/f485b39300c32f8a0456085df04def47cfb6dded.jpg"/>
-        
-            <div class="char-content">
-                <div class="name">character name</div>
-
-                <div class="char-subheading">subheading goes here</div>
-            
-            <div class="ch-bio">lorem ipsum dolor sit amet, consectetur adipiscing elit. integer nec odio. praesent libero. sed cursus ante dapibus diam. sed nisi nulla quis.</div>
-            </div>
-        </div>
     
     </div><!-- end character wrap -->
-</section><!-- end section -->
+</section><!-- end major characters section -->
 
 
-<!---- minor characters ---->
+<!---------- minor characters ---------->
 
 <section>
 <h1>minor characters <i class="ph ph-user-list"></i></h1>
@@ -731,9 +733,8 @@ slide out menu content - delete this section (from here through the three dashed
         <span><b>Character Name:</b> lorem ipsum dolor sit amet, consectetur adipiscing elit. integer nec odio.</span> 
         
         <span><b>Character Name:</b> praesent mauris. fusce nec tellus sed augue semper porta.</span>  
-
     </div>
-</section><!-- end section -->
+</section><!-- end minor characters section -->
 
 
 <!-- if you want to add another section below the minor characters for additional information, just copy this code below (from the open section tag to the close section tag) and paste it right above these instructions.
@@ -748,12 +749,11 @@ slide out menu content - delete this section (from here through the three dashed
 </section>
 
 -->
+
 </div><!-- end col two -->
-
-
 <div id="col-one">
 
-<!--  links -->
+<!----------  links section ---------->
 
 <section>
     <h1>navigate <i class="ph ph-link"></i></h1>
@@ -774,8 +774,8 @@ slide out menu content - delete this section (from here through the three dashed
                 <a href="">unsplash</a>
                 <a href="/">sideblog</a>
                 <a href="/">spotify</a>
-                <a href="/">spotify</a>
-                <a href="/">spotify</a>
+                <a href="/">website</a>
+                <a href="/">link</a>
             </div>
 </section><!-- end section -->
 
@@ -802,10 +802,10 @@ slide out menu content - delete this section (from here through the three dashed
     </div>
 
 </div>
-</section><!-- end section -->
+</section><!-- end details section -->
 
 
-<!-- terms to know - feel free to change this to whatever you want! -->
+<!---- terms to know - feel free to change this to whatever you want! ---->
 
 <section>
     <h1>terms to know <i class="ph ph-bookmarks"></i></h1>
@@ -819,7 +819,7 @@ slide out menu content - delete this section (from here through the three dashed
 </section><!-- end section -->
 
 
-<!-- locations - again, this can be anything you want or you can delete this section! -->
+<!---------- locations - again, this can be anything you want or you can delete this section! ---------->
 
 <section>
     <h1>locations <i class="ph ph-map-pin"></i></h1>
@@ -833,29 +833,50 @@ slide out menu content - delete this section (from here through the three dashed
     </div>
 </section><!-- end section -->
     
+    
 </div><!-- end col one -->
-
-</div>
+</div><!-- end main wrap -->
 </main><!-- end main container -->
 
 
-<!---- footer - you can delete this section if you don't want it! ---->
+<!------ footer - you can delete this section if you don't want it! ------>
 
 <footer>
     <div id="footer-wrap">
         
         <div id="foot-one">
             <h1>about the author</h1>
+            
+            <!-- author icon - delete if you don't want! -->
+            <div class="author"><img src="https://64.media.tumblr.com/e5f7230efe492682f314b9133d91e049/7421119c06490779-33/s400x600/b24899d1a91b32157092b7ac498d921553235c9f.jpg"/></div>
+            
             Lorem ipsum dolor sit amet. At commodi amet id fugiat harum ex blanditiis nulla cum consequatur accusamus ut doloribus magnam ut expedita perspiciatis? Et fugiat quaerat 33 animi consectetur eum sunt reiciendis. Quo sunt quia ab doloremque totam est repellendus nulla qui magni architecto aut expedita dolores.
         </div>
         
         <div id="foot-two">
-            <h1>heading</h1>
-            lorem ipsum dolor sit amet, consectetur adipiscing elit. integer nec odio. praesent libero. sed cursus ante dapibus diam. sed nisi. nulla quis sem at nibh elementum imperdiet.
+            <h1>social</h1>
+            
+<!-- if you want to delete the social links and just put text here, you can! just delete from "socials" to "end socials" and then add any text you want. also feel free to add/remove whichever socials you want, there are four columns though, so it'll look best in multiples of four. -->
+            
+            <!-- socials -->
+            <div class="socials">
+            <a href="/"><i class="ph ph-instagram-logo"></i> instagram</a>
+            <a href="/"><i class="ph ph-facebook-logo"></i> facebook</a>
+            <a href="/"><i class="ph ph-pinterest-logo"></i> pinterest</a>
+            <a href="/"><i class="ph ph-tiktok-logo"></i> tiktok</a>
+            <a href="/"><i class="ph ph-twitter-logo"></i> twitter</a>
+            <a href="/"><i class="ph ph-discord-logo"></i> discord</a>
+            <a href="/"><i class="ph ph-patreon-logo"></i> patreon</a>
+            <a href="/"><i class="ph ph-needle"></i> threads</a>
+            <a href="/"><i class="ph ph-youtube-logo"></i> youtube</a>
+            <a href="/"><i class="ph ph-goodreads-logo"></i> goodreads</a>
+            <a href="/"><i class="ph ph-desktop"></i> website</a>
+            <a href="/"><i class="ph ph-envelope-simple"></i> substack</a>
+            </div><!-- end socials-->
+            
         </div>
-        
     </div>
-</footer>
+</footer><!-- end footer -->
 
 
 <!-- remove this script if you want a javascript-free code -->
