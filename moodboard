@@ -39,7 +39,7 @@
     <meta name="color:text" content="#444" />
     <meta name="color:headings" content="#222" />
     <meta name="color:accent" content="#d7ac7f"/>
-    <meta name="color:light accent" content="#b87575"/>
+    <meta name="color:light accent" content="#ebdbca"/>
     <meta name="color:tags" content="#aaaaaa" />
     <meta name="color:borders" content="#eee" />
     <meta name="color:selection text" content="#000000"/>
@@ -1090,7 +1090,7 @@ iframe.tmblr-iframe:hover {
 <!-- PHOTO POSTS -->
 
 {block:Photo}
-    <div class="legacy-photo"><img src="{PhotoURL-HighRes}" alt="{photoalt}" class="photos"></div>
+<div class="legacy-photo"><div class="photo">{LinkOpenTag}<a href="#" onclick="Tumblr.Lightbox.init([{ width: {PhotoWidth-HighRes}, height: {PhotoHeight-HighRes}, low_res: '{PhotoURL-500}', high_res: '{PhotoURL-HighRes}' }]); $('body').toggleClass('tumblr_lightbox_active'); return false"><img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"></a>{LinkCloseTag}</div></div>
 <!-- CAPTIONS -->
 {block:NotReblog}
     {block:Caption}
@@ -1116,11 +1116,7 @@ iframe.tmblr-iframe:hover {
 <!-- PHOTOSETS -->
 
 {block:Photoset}
-<div class="photoset-grid" photoset-layout="{PhotosetLayout}">
-    {block:Photos}
-    <div><img src="{PhotoURL-HighRes}" /></div>
-    {/block:Photos}
-</div>
+<div class="photoset-grid" photoset-layout="{PhotosetLayout}">{block:Photos}<div data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}" data-lowres="{PhotoURL-500}" data-highres="{PhotoURL-HighRes}" onclick="lightbox(this)"><img src="{PhotoURL-HighRes}" /></div>{/block:Photos}</div>
 
 <!-- CAPTIONS -->
 {block:NotReblog}
@@ -1554,8 +1550,6 @@ $(document).ready(function() {
 });
 </script>
 
-<!-- dark mode -->
-
 <script>
 const modeBtns = document.querySelectorAll(".theme-toggle");
 modeBtns.forEach((btn) => {
@@ -1570,6 +1564,32 @@ modeBtns.forEach((btn) => {
         }, 50);
     });
 });
+</script>
+
+<script>
+function gatherData(images, arr) {
+  for (let i = 0; i < images.length; i++) {
+    let currentData = {
+      "width": images[i].getAttribute('data-width'),
+      "height": images[i].getAttribute('data-height'),
+      "low_res": images[i].getAttribute('data-lowres'),
+      "high_res": images[i].getAttribute('data-highres')
+    };
+    arr.push(currentData);
+  }
+}
+function getIndex(elem) {
+  let i = 0;
+  while( (elem = elem.previousElementSibling) != null ) i++;
+  return i;
+}
+function lightbox(elem) {
+  let currentPhotoset = elem.parentNode;
+  let photosetPhotos = currentPhotoset.getElementsByTagName('div');
+  let data = [];
+  gatherData(photosetPhotos, data);
+  Tumblr.Lightbox.init(data, getIndex(elem) + 1);
+}
 </script>
 </body>
 </html>
