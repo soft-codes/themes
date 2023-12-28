@@ -32,7 +32,6 @@
     <meta name="image:nine" content=""/>
 
     <meta name="if:pale sidebar images" content=""/>
-    <meta name="if:light tumblr controls" content=""/>
        
     <meta name="color:background" content="#ffffff" />
     <meta name="color:sidebar" content="#f8f8f8" />
@@ -125,9 +124,7 @@
 
 <script>
 const storedTheme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-    if (storedTheme) {
-      document.documentElement.setAttribute("data-theme", storedTheme); 
-    }
+if (storedTheme) document.documentElement.setAttribute("data-theme", storedTheme); 
 </script>
 
 <style>
@@ -155,6 +152,7 @@ const storedTheme = localStorage.getItem("theme") || (window.matchMedia("(prefer
     --tags: {color:tags};
     --selection-text:{color:selection text};
     --selection-background:{color:selection background};
+    --tumblr-controls-filter: invert(100%) hue-rotate(180deg);
 }
 
 html[data-theme='dark'] {
@@ -170,6 +168,7 @@ html[data-theme='dark'] {
     --tags: {color:DARK tags};
     --selection-text:{color:DARK selection text};
     --selection-background:{color:DARK selection background};
+    --tumblr-controls-filter: invert(0%);
 }
 
 html.theme-transition,
@@ -931,25 +930,19 @@ a.poll-row p {margin-top: 0;}
 
 iframe.tmblr-iframe {
     z-index:99999999999999!important;
-    top:2px!important;
-    right:2!important;
-    opacity:0.5;
-        {block:ifnotlighttumblrcontrols}
-        filter:invert(1) contrast(150%);
-        -webkit-filter:invert(1) contrast(150%);
-        -o-filter:invert(1) contrast(150%);
-        -moz-filter:invert(1) contrast(150%);
-        -ms-filter:invert(1) contrast(150%);
-        {/block:ifnotlighttumblrcontrols}
-    transform:scale(0560);
+    top:4px!important;
+    right:0!important;
+    filter:var(--tumblr-controls-filter);
+    opacity:0.6;
+    transform:scale(0.65);
     transform-origin:100% 0;
-    -webkit-transform:scale(0.60);
+    -webkit-transform:scale(0.65);
     -webkit-transform-origin:100% 0;
-    -o-transform:scale(0.60);
+    -o-transform:scale(0.65);
     -o-transform-origin:100% 0;
-    -moz-transform:scale(0.60);
+    -moz-transform:scale(0.65);
     -moz-transform-origin:100% 0;
-    -ms-transform:scale(0.60);
+    -ms-transform:scale(0.65);
     -ms-transform-origin:100% 0;
     -moz-transition-duration: 0.3s;
     -o-transition-duration: 0.3s;
@@ -964,7 +957,6 @@ iframe.tmblr-iframe:hover {
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
 }
-
 
 /*--- for small desktop/tablet screens. converts sidebar to header ---*/
 
