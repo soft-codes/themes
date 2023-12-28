@@ -1326,6 +1326,8 @@ iframe.tmblr-iframe:hover {
 {block:Date}
     <div class="info">
         <div class="info-left">
+        {block:PinnedPostLabel}<i class="iconsax" icon-name="info-badge"></i><a href="{Permalink}" class="pinned-post">{PinnedPostLabel}</a>{/block:PinnedPostLabel}
+        
         <i class="iconsax" icon-name="calendar-1"></i><a href="{permalink}" class="notecount" title="{TimeAgo}">{DayofWeek}</a>
         <i class="iconsax" icon-name="message-dots-favorite"></i><span class="notecount">{NoteCountWithLabel}</span>
         </div>
