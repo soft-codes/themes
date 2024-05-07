@@ -24,6 +24,8 @@
 <meta name="image:icon" content=""/>
 <meta name="image:sidebar" content=""/>
 <meta name="image:project image" content=""/>
+
+<meta name="if:right sidebar" content=""/>
     
 <meta name="color:background" content="#ffffff" />
 <meta name="color:post accent" content="#f6f6f6" />
