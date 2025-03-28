@@ -26,6 +26,8 @@
 <meta name="image:project image" content=""/>
 
 <meta name="if:right sidebar" content=""/>
+<meta name="if:sidebar image" content="1"/>
+<meta name="if:icon" content="1"/>
     
 <meta name="color:background" content="#ffffff" />
 <meta name="color:post accent" content="#f6f6f6" />
@@ -139,7 +141,7 @@
 <!-- icon fonts -->
 
 <link href="https://iconsax.gitlab.io/i/icons.css" rel="stylesheet">
-<script src="https://unpkg.com/@phosphor-icons/web"></script>
+<script src="https://cdn.jsdelivr.net/npm/@phosphor-icons/web"></script>
 
 <!-- google font -->
 
@@ -392,6 +394,7 @@ article {
     margin-top:-3px;
 }
 
+{block:ificon}
 #icon {
     position:relative;
     width:50px;
@@ -410,7 +413,15 @@ article {
     margin-left:-4px;
     margin-top:-4px;
 }
+{/block:ificon}
 
+{block:ifnoticon}
+#icon {display:none;}
+
+#sidebarimg {margin-top:0.5rem;}
+{/block:ifnoticon}
+
+{block:ifsidebarimage}
 #sidebarimg {
     width:100%;
     height:auto;
@@ -422,6 +433,17 @@ article {
     height:auto;
     border-radius:3px;
 }
+{/block:ifsidebarimage}
+
+{block:ifnotsidebarimage}
+#icon {
+    margin-bottom:0;
+    margin-left:0;
+    margin-top:0.5rem;
+}
+
+#sidebarimg {display:none;}
+{/block:ifnotsidebarimage}
 
 #description {display:block;margin-top:0.75em;}
 
@@ -726,6 +748,10 @@ h1.post-title {
 h1.post-title a {color:var(--headings);}
 
 /*----- photosets -----*/
+
+.photo img {
+    width:100%;
+}
 
 [photoset-layout] {
   grid-gap:{select:photoset gutter};
