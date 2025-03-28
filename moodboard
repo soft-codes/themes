@@ -998,7 +998,7 @@ iframe.tmblr-iframe:hover {
 </button>
 
 <!-- scroll to top -->
-<div class="scrollToTopBtn"><i class="ph-arrow-up"></i>️</div>
+<div class="scrollToTopBtn"><i class="ph ph-arrow-up"></i>️</div>
 
 <!-- main container -->    
 <main>
@@ -1321,9 +1321,9 @@ iframe.tmblr-iframe:hover {
         </div>
         
         <div class="post-controls">
-        <a class="likeb" href="#" title="like">{LikeButton}<span class="actual-button"><i class="ph-heart"></i></span></a>
+        <a class="likeb" href="#" title="like">{LikeButton}<span class="actual-button"><i class="ph ph-heart"></i></span></a>
         
-        <a href="{ReblogURL}" target="_blank" title="reblog"><i class="ph-arrow-clockwise"></i></a>
+        <a href="{ReblogURL}" target="_blank" title="reblog"><i class="ph ph-arrow-clockwise"></i></a>
         </div>
     </div>
 
@@ -1364,12 +1364,12 @@ iframe.tmblr-iframe:hover {
 
 {block:Pagination}
 <article id="page-navigation">
-    {block:PreviousPage}<a href="{PreviousPage}" title="previous page"><i class="ph-arrow-left"></i></a>{/block:PreviousPage}
+    {block:PreviousPage}<a href="{PreviousPage}" title="previous page"><i class="ph ph-arrow-left"></i></a>{/block:PreviousPage}
         {block:JumpPagination length="5"}
             {block:CurrentPage}<span class="current-page">{PageNumber}</span>{/block:CurrentPage}
             {block:JumpPage}<a href="{URL}">{PageNumber}</a>{/block:JumpPage}
         {/block:JumpPagination}
-    {block:NextPage}<a href="{NextPage}" title="next page"><i class="ph-arrow-right"></i></a>{/block:NextPage}
+    {block:NextPage}<a href="{NextPage}" title="next page"><i class="ph ph-arrow-right"></i></a>{/block:NextPage}
 </article>
 {/block:Pagination}
 
